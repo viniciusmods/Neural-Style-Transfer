@@ -111,7 +111,7 @@ with torch.no_grad():
 network.train()
 
 network.to(device)
-network = nn.DataParallel(network, device_ids=[0,1])
+network = nn.DataParallel(network, device_ids=[0])
 content_tf = train_transform()
 style_tf = train_transform()
 
